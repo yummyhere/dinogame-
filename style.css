@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: flex-start;
     padding-top: 80px;
-
+}
 
 
 #game{
@@ -41,13 +41,13 @@ body{
 }
 @keyframes jump{
     0% {
-     top : 150px;
+     bottom: 150px;
     }
     50%{
-       top: 60px;
+      bottom: 60px;
     }
     100%{
-        top   : 150px;
+        bottom: 150px;
     }
 }
 
