@@ -30,10 +30,10 @@ document.addEventListener("keydown", (e) => {
 
 
 let collisionCheck = setInterval(() => {
-    let dinotop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
+    let dinobottom = parseInt(window.getComputedStyle(dino).getPropertyValue("bottom"));
     let cactusleft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-    if (cactusleft < 30 && cactusleft > 0 && dinotop > 100) {
+    if (cactusleft < 30 && cactusleft > 0 && dinobottom < 40) {
       
         cactus.style.animation = "none" ;
         dino.style.animation ="none"
@@ -48,3 +48,12 @@ let collisionCheck = setInterval(() => {
     }
     
 }, 10);
+function jump(){
+    if (!dino.classList.contains("animatedino")) {
+        dino.classList.add("animatedino");
+
+        setTimeout(() => {
+            dino.classList.remove("animatedino");
+        }, 500);
+    }
+}
